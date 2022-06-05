@@ -66,15 +66,18 @@ def extract_gem_name(l, gem_names):
     prefix = l[pos]
     result = l[pos + 1]
     pos += 1
-    while result not in gem_names:
+    while result not in gem_names and pos + 1 < len(l):
         pos += 1
         result += " " + l[pos]
+    if result not in gem_names:
+        print("Trouble parsing gem data due to OCR technical difficulties, sorry! (you're gonna have to look this one up manually)")
+        sys.exit(1)
     return prefix + " " + result
 
 
 def get_gem_name():
     cap = ImageGrab.grab()
-    _, img = cv2.threshold(nm.array(cap), 130, 255, cv2.THRESH_BINARY)
+    _, img = cv2.threshold(nm.array(cap), 150, 255, cv2.THRESH_BINARY)
     tesstr = pytesseract.image_to_string(nm.array(img), lang="eng", config="heist")
     gem_name = [x.lower() for x in tesstr.split("\n") if contains_gem_type(x)]
     split_list = []
@@ -92,11 +95,7 @@ def get_gem_name():
 
 def get_gem_price(min_level=3, max_level=19):
     data = get_gem_data()
-    try:
-        gem_info = extract_gem_info(data, get_gem_name())
-    except Exception:
-        print("No gem data on screen")
-        sys.exit(1)
+    gem_info = extract_gem_info(data, get_gem_name())
     results = {}
     for name, d in gem_info.items():
         results[name] = {}
@@ -107,6 +106,9 @@ def get_gem_price(min_level=3, max_level=19):
 
 def print_output():
     price_info = get_gem_price()
+    if not len(price_info):
+        print("Trouble parsing gem data due to OCR technical difficulties, sorry! (you're gonna have to look this one up manually)")
+        sys.exit(1)
     for gem, level_dict in price_info.items():
         min_level = min(level_dict.keys())
         chaos_value = level_dict[min_level]["chaos"]
