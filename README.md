@@ -6,6 +6,8 @@ Setup guide
 1) `git clone https://github.com/trevorm4/HeistGemPricechecker.git`
 2) Install tesseract executable and change path in `config.yaml` if necessary (can be found [here](https://github.com/UB-Mannheim/tesseract/wiki))
 3) Open `heist_pricer.ahk` and change the script/python executable/hotkey if necessary
-4) Press `f3` in game when the gem case is in your screen and enjoy!
+4) Press `f3` (or the key you changed it to) in game when the gem case is in your screen and enjoy!
 
 ![text](https://i.imgur.com/wTmqVyx.png)
+
+Feel free to report any bugs in the issue tracker
