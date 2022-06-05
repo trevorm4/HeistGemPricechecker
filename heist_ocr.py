@@ -70,7 +70,7 @@ def extract_gem_name(l, gem_names):
         pos += 1
         result += " " + l[pos]
     if result not in gem_names:
-        print("Trouble parsing gem data due to OCR technical difficulties, sorry! (you're gonna have to look this one up manually)")
+        print("Trouble parsing gem data due to OCR technical difficulties, sorry! (try holding alt and trying again)")
         sys.exit(1)
     return prefix + " " + result
 
@@ -107,7 +107,7 @@ def get_gem_price(min_level=3, max_level=19):
 def print_output():
     price_info = get_gem_price()
     if not len(price_info):
-        print("Trouble parsing gem data due to OCR technical difficulties, sorry! (you're gonna have to look this one up manually)")
+        print("Trouble parsing gem data due to OCR technical difficulties, sorry! (try holding alt and trying again)")
         sys.exit(1)
     for gem, level_dict in price_info.items():
         min_level = min(level_dict.keys())
