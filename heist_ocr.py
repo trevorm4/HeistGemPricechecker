@@ -1,4 +1,4 @@
-import cv2, json, pathlib, pytesseract, sys, requests, pprint
+import cv2, json, pathlib, pytesseract, sys, requests, pprint, yaml
 import numpy as nm
 from PIL import ImageGrab
 from os.path import join
@@ -6,9 +6,10 @@ from string import punctuation
 
 gem_types = ["phantasmal", "divergent", "anomalous"]
 gem_url = "https://poe.ninja/api/data/itemoverview?league={0}&type=SkillGem"
-pytesseract.pytesseract.tesseract_cmd = (
-    r"C:\Program Files (x86)\Tesseract-OCR\tesseract"
-)
+config = {}
+with open("config.yaml", "r") as f:
+    config = yaml.load(f, Loader=yaml.CLoader)
+pytesseract.pytesseract.tesseract_cmd = config["tesseract_exe"]
 
 
 def load_gem_names(gem_names):

@@ -1,1 +1,1 @@
-tesseract_exe=<your path here>
+tesseract_exe: "C:\\Program Files (x86)\\Tesseract-OCR\\tesseract"
