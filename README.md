@@ -1,4 +1,4 @@
-# HeistGemPricechecker
+# Heist Gem Price Checker
 Prices heist gems using OCR and Poe.Ninja api
 
 Setup guide
