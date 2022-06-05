@@ -1,0 +1,458 @@
+Ambush
+Ancestral Cry
+Ancestral Protector
+Ancestral Warchief
+Anger
+Animate Guardian
+Animate Weapon
+Arc
+Arcane Cloak
+Arcanist Brand
+Arctic Armour
+Armageddon Brand
+Artillery Ballista
+Assassin's Mark
+Ball Lightning
+Bane
+Barrage
+Battlemage's Cry
+Bear Trap
+Berserk
+Blade Blast
+Blade Flurry
+Blade Trap
+Blade Vortex
+Bladefall
+Bladestorm
+Blast Rain
+Blazing Salvo
+Blight
+Blink Arrow
+Blood and Sand
+Blood Rage
+Bodyswap
+Bone Offering
+Boneshatter
+Brand Recall
+Burning Arrow
+Caustic Arrow
+Chain Hook
+Charged Dash
+Clarity
+Cleave
+Cobra Lash
+Cold Snap
+Conductivity
+Consecrated Path
+Contagion
+Conversion Trap
+Convocation
+Corrupting Fever
+Crackling Lance
+Creeping Frost
+Cremation
+Cyclone
+Dark Pact
+Dash
+Decoy Totem
+Defiance Banner
+Desecrate
+Despair
+Destructive Link
+Determination
+Detonate Dead
+Detonate Mines
+Devouring Totem
+Discharge
+Discipline
+Divine Ire
+Dominating Blow
+Double Strike
+Dread Banner
+Dual Strike
+Earthquake
+Earthshatter
+Elemental Hit
+Elemental Weakness
+Enduring Cry
+Energy Blade
+Enfeeble
+Ensnaring Arrow
+Essence Drain
+Ethereal Knives
+Explosive Arrow
+Explosive Concoction
+Explosive Trap
+Exsanguinate
+Eye of Winter
+Fire Trap
+Fireball
+Firestorm
+Flame Dash
+Flame Link
+Flame Surge
+Flame Wall
+Flameblast
+Flamethrower Trap
+Flammability
+Flesh and Stone
+Flesh Offering
+Flicker Strike
+Forbidden Rite
+Freezing Pulse
+Frenzy
+Frost Blades
+Frost Bomb
+Frost Shield
+Frost Wall
+Frostbite
+Frostblink
+Frostbolt
+Galvanic Arrow
+General's Cry
+Glacial Cascade
+Glacial Hammer
+Grace
+Ground Slam
+Haste
+Hatred
+Heavy Strike
+Herald of Agony
+Herald of Ash
+Herald of Ice
+Herald of Purity
+Herald of Thunder
+Hexblast
+Holy Flame Totem
+Hydrosphere
+Ice Crash
+Ice Nova
+Ice Shot
+Ice Spear
+Ice Trap
+Icicle Mine
+Immortal Call
+Incinerate
+Infernal Blow
+Infernal Cry
+Intimidating Cry
+Intuitive Link
+Kinetic Blast
+Kinetic Bolt
+Lacerate
+Lancing Steel
+Leap Slam
+Lightning Arrow
+Lightning Spire Trap
+Lightning Strike
+Lightning Tendrils
+Lightning Trap
+Lightning Warp
+Malevolence
+Manabond
+Mirror Arrow
+Molten Shell
+Molten Strike
+Orb of Storms
+Penance Brand
+Perforate
+Pestilent Strike
+Petrified Blood
+Phase Run
+Plague Bearer
+Poacher's Mark
+Poisonous Concoction
+Portal
+Power Siphon
+Precision
+Pride
+Protective Link
+Puncture
+Punishment
+Purifying Flame
+Purity of Elements
+Purity of Fire
+Purity of Ice
+Purity of Lightning
+Pyroclast Mine
+Rage Vortex
+Rain of Arrows
+Raise Spectre
+Raise Zombie
+Rallying Cry
+Reap
+Reave
+Reckoning
+Rejuvenation Totem
+Righteous Fire
+Riposte
+Rolling Magma
+Scorching Ray
+Scourge Arrow
+Searing Bond
+Seismic Cry
+Seismic Trap
+Shattering Steel
+Shield Charge
+Shield Crush
+Shock Nova
+Shockwave Totem
+Shrapnel Ballista
+Siege Ballista
+Sigil of Power
+Siphoning Trap
+Smite
+Smoke Mine
+Sniper's Mark
+Soul Link
+Soulrend
+Spark
+Spectral Helix
+Spectral Shield Throw
+Spectral Throw
+Spirit Offering
+Split Arrow
+Splitting Steel
+Static Strike
+Steelskin
+Storm Brand
+Storm Burst
+Storm Call
+Storm Rain
+Stormbind
+Stormblast Mine
+Summon Carrion Golem
+Summon Chaos Golem
+Summon Flame Golem
+Summon Holy Relic
+Summon Ice Golem
+Summon Lightning Golem
+Summon Raging Spirit
+Summon Reaper
+Summon Skeletons
+Summon Skitterbots
+Summon Stone Golem
+Sunder
+Sweep
+Tectonic Slam
+Tempest Shield
+Temporal Chains
+Temporal Rift
+Tornado
+Tornado Shot
+Toxic Rain
+Unearth
+Vaal Ancestral Warchief
+Vaal Arc
+Vaal Blade Vortex
+Vaal Blight
+Vaal Breach
+Vaal Burning Arrow
+Vaal Clarity
+Vaal Cold Snap
+Vaal Cyclone
+Vaal Detonate Dead
+Vaal Discipline
+Vaal Double Strike
+Vaal Earthquake
+Vaal Fireball
+Vaal Flameblast
+Vaal Glacial Hammer
+Vaal Grace
+Vaal Ground Slam
+Vaal Haste
+Vaal Ice Nova
+Vaal Immortal Call
+Vaal Impurity of Fire
+Vaal Impurity of Ice
+Vaal Impurity of Lightning
+Vaal Lightning Strike
+Vaal Lightning Trap
+Vaal Lightning Warp
+Vaal Molten Shell
+Vaal Power Siphon
+Vaal Rain of Arrows
+Vaal Reave
+Vaal Righteous Fire
+Vaal Spark
+Vaal Spectral Throw
+Vaal Storm Call
+Vaal Summon Skeletons
+Vampiric Link
+Vengeance
+Venom Gyre
+Vigilant Strike
+Viper Strike
+Vitality
+Void Sphere
+Volatile Dead
+Voltaxic Burst
+Vortex
+Vulnerability
+War Banner
+Warlord's Mark
+Wave of Conviction
+Whirling Blades
+Wild Strike
+Winter Orb
+Wintertide Brand
+Wither
+Withering Step
+Wrath
+Zealotry
+Added Chaos Damage Support Support
+Added Cold Damage Support
+Added Fire Damage Support
+Added Lightning Damage Support
+Additional Accuracy Support
+Advanced Traps Support
+Ancestral Call Support
+Arcane Surge Support
+Archmage Support
+Arrogance Support
+Arrow Nova Support
+Awakened Added Chaos Damage Support
+Awakened Added Cold Damage Support
+Awakened Added Fire Damage Support
+Awakened Added Lightning Damage Support
+Awakened Ancestral Call Support
+Awakened Arrow Nova Support
+Awakened Blasphemy Support
+Awakened Cast On Critical Strike Support
+Awakened Chain Support
+Awakened Deadly Ailments Support
+Awakened Fork Support
+Awakened Generosity Support
+Awakened Increased Area Of Effect Support
+Awakened Multistrike Support
+Awakened Swift Affliction Support
+Awakened Unbound Ailments Support
+Awakened Unleash Support
+Ballista Totem Support
+Barrage Support
+Behead Support
+Blasphemy Support
+Blastchain Mine Support
+Blind Support
+Block Chance Reduction Support
+Bloodlust Support
+Bloodthirst Support
+Bonechill Support
+Brutality Support
+Burning Damage Support
+Cast On Critical Strike Support
+Cast on Death Support
+Cast on Melee Kill Support
+Cast when Damage Taken Support
+Cast when Stunned Support
+Cast while Channelling Support
+Chain Support
+Chance to Bleed Support
+Chance to Flee Support
+Chance to Poison Support
+Charged Mines Support
+Charged Traps Support
+Close Combat Support
+Cluster Traps Support
+Cold Penetration Support
+Cold to Fire Support
+Combustion Support
+Concentrated Effect Support
+Controlled Destruction Support
+Critical Strike Affliction Support
+Cruelty Support
+Culling Strike Support
+Damage on Full Life Support
+Deadly Ailments Support
+Decay Support
+Divine Blessing Support
+Earthbreaker Support
+Efficacy Support
+Elemental Army Support
+Elemental Focus Support
+Elemental Penetration Support
+Elemental Proliferation Support
+Empower Support
+Endurance Charge on Melee Stun Support
+Energy Leech Support
+Enhance Support
+Enlighten Support
+Eternal Blessing Support
+Faster Casting Support
+Feeding Frenzy Support
+Fire Penetration Support
+Fist of War Support
+Focused Ballista Support
+Fork Support
+Fortify Support
+Generosity Support
+Greater Volley Support
+Hextouch Support
+High-Impact Mine Support
+Hypothermia Support
+Ice Bite Support
+Ignite Proliferation Support
+Immolate Support
+Impale Support
+Impending Doom Support
+Increased Area of Effect Support
+Increased Critical Damage Support
+Increased Critical Strikes Support
+Increased Duration Support
+Infernal Legion Support
+Infused Channelling Support
+Innervate Support
+Inspiration Support
+Intensify Support
+Iron Grip Support
+Iron Will Support
+Item Quantity Support
+Item Rarity Support
+Knockback Support
+Less Duration Support
+Life Gain on Hit Support
+Life Leech Support
+Lifetap Support
+Lightning Penetration Support
+Maim Support
+Mana Leech Support
+Mark On Hit Support
+Meat Shield Support
+Melee Physical Damage Support
+Melee Splash Support
+Minefield Support
+Minion Damage Support
+Minion Life Support
+Minion Speed Support
+Mirage Archer Support
+Multiple Totems Support
+Multiple Traps Support
+Multistrike Support
+Nightblade Support
+Onslaught Support
+Physical to Lightning Support
+Pierce Support
+Pinpoint Support
+Point Blank Support
+Power Charge On Critical Support Support
+Predator Support Support
+Pulverise Support Support
+Rage Support Support
+Ruthless Support Support
+Second Wind Support Support
+Shockwave Support Support
+Stun Support Support
+Summon Phantasm Support Support
+Swift Affliction Support Support
+Swift Assembly Support Support
+Swiftbrand Support Support
+Trap and Mine Damage Support Support
+Trap Support Support
+Trinity Support Support
+Unbound Ailments Support Support
+Unleash Support Support
+Urgent Orders Support Support
+Vile Toxins Support Support
+Void Manipulation Support Support
+VolleySupport Support Support
+Withering Touch Support Support
