@@ -18,6 +18,7 @@ JEE_RunGetStdOut(vTarget, vSize:="")
     Process, Close, % vPID
     return vStdOut
 }
+Alt & F3::
 F3::
 {
     result := JEE_RunGetStdOut(command . script)
