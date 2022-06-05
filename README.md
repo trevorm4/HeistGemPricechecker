@@ -11,4 +11,7 @@ Setup guide
 
 ![text](https://i.imgur.com/y4ctvrz.png)
 
+Tips:
+1) If a long name is having trouble being parsed, try holding down alt when you press your keybind
+
 Feel free to report any bugs in the issue tracker
