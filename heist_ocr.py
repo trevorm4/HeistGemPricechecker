@@ -31,12 +31,18 @@ def extract_gem_info(lines: dict, gem_names: list):
         results[gem_name] = {}
         for l in lines:
             if l["name"].lower() == gem_name:
-                results[gem_name][l.get("gemLevel")] = {
-                    "quality": l.get("gemQuality", 0),
-                    "chaosValue": l["chaosValue"],
-                    "exValue": l["exaltedValue"],
-                    "listingCount": l.get("listingCount", 0),
-                }
+                if results[gem_name].get(l.get("gemLevel")):
+                    results[gem_name][l.get("gemLevel")]["chaos"] = min(
+                        results[gem_name][l.get("gemLevel")]["chaos"], l.get("chaosValue")
+                    )
+                    results[gem_name][l.get("gemLevel")]["ex"] = min(
+                        results[gem_name][l.get("gemLevel")]["ex"], l.get("exaltedValue")
+                    )
+                else:
+                    results[gem_name][l.get("gemLevel")] = {
+                        "chaos": l["chaosValue"],
+                        "ex": l["exaltedValue"],
+                    }
     return results
 
 
@@ -84,11 +90,11 @@ def get_gem_name():
     return nm.unique([extract_gem_name(gem_str, gems) for gem_str in split_list])
 
 
-def get_gem_price(min_level=15, max_level=19):
+def get_gem_price(min_level=3, max_level=19):
     data = get_gem_data()
     try:
         gem_info = extract_gem_info(data, get_gem_name())
-    except:
+    except Exception:
         print("No gem data on screen")
         sys.exit(1)
     results = {}
@@ -99,5 +105,12 @@ def get_gem_price(min_level=15, max_level=19):
                 results[name][level] = data
     return results
 
+def print_output():
+    price_info = get_gem_price()
+    for gem, level_dict in price_info.items():
+        min_level = min(level_dict.keys())
+        chaos_value = level_dict[min_level]["chaos"]
+        ex_value = level_dict[min_level]["ex"]
+        print(f"{gem} (level {min_level}) - chaos: {chaos_value}, ex: {ex_value}")
 
-pprint.pprint(get_gem_price())
+print_output()
