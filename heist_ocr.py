@@ -77,7 +77,7 @@ def extract_gem_name(l, gem_names):
 
 def get_gem_name():
     cap = ImageGrab.grab()
-    _, img = cv2.threshold(nm.array(cap), 140, 255, cv2.THRESH_BINARY)
+    _, img = cv2.threshold(nm.array(cap), 135, 255, cv2.THRESH_BINARY)
     tesstr = pytesseract.image_to_string(nm.array(img), lang="eng", config="heist")
     gem_name = [x.lower() for x in tesstr.split("\n") if contains_gem_type(x)]
     split_list = []
