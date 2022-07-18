@@ -1,15 +1,12 @@
-import cv2, json, pathlib, pytesseract, sys, requests, pprint, yaml
+import cv2, json, pathlib, pytesseract, sys, requests
 import numpy as nm
 from PIL import ImageGrab, Image
 from os.path import join
-from string import punctuation
+from sys import argv
 
 gem_types = ["phantasmal", "divergent", "anomalous"]
 gem_url = "https://poe.ninja/api/data/itemoverview?league={0}&type=SkillGem"
-config = {}
-with open("config.yaml", "r") as f:
-    config = yaml.load(f, Loader=yaml.CLoader)
-pytesseract.pytesseract.tesseract_cmd = config["tesseract_exe"]
+pytesseract.pytesseract.tesseract_cmd = "Tesseract-OCR\\tesseract"
 
 
 def load_gem_names(gem_names):
@@ -22,6 +19,9 @@ def load_gem_names(gem_names):
 
 def get_gem_data(league="Sentinel"):
     r = requests.get(gem_url.format(league))
+    if r.status_code != 200:
+        print("Request to Poe.Ninja failed, most likely invalid league provided")
+        sys.exit(1)
     return json.loads(r.text)["lines"]
 
 
@@ -54,12 +54,13 @@ def contains_gem_type(s):
     return False
 
 
-def no_punct(word):
-    return all([not x in word for x in punctuation])
+def is_alpha_or_quote(word):
+    return all([x.isalpha() or x == "'" for x in word])
 
 
 def extract_gem_name(l, gem_names):
     pos = -1
+    all_gem_words = []
     for i, word in enumerate(l):
         if word in gem_types:
             pos = i
@@ -69,6 +70,8 @@ def extract_gem_name(l, gem_names):
     while result not in gem_names and pos + 1 < len(l):
         pos += 1
         result += " " + l[pos]
+    if l[pos] == "mark" and "'" not in l[pos - 1]: # case handling for marks
+        result = result.replace("s mark", "'s mark")
     if result not in gem_names:
         print("Trouble parsing gem data due to OCR technical difficulties, sorry! (try holding alt and trying again)")
         sys.exit(1)
@@ -84,11 +87,11 @@ def get_gem_name():
     for name in gem_name:
         temp_list = []
         for word in name.split(" "):
-            if "(" not in word and ")" not in word and no_punct(word):
+            if "(" not in word and ")" not in word and is_alpha_or_quote(word):
                 temp_list.append(word)
         split_list.append(temp_list)
     gems = []
-    with open(join(pathlib.Path(__file__).parent.resolve(), "gem_names.txt"), "r") as f:
+    with open(join(pathlib.Path(__file__).parent.resolve(), "gem_names/gem_names.txt"), "r") as f:
         gems = [x.lower().rstrip() for x in f.readlines()]
     return nm.unique([extract_gem_name(gem_str, gems) for gem_str in split_list])
 
@@ -105,7 +108,10 @@ def get_gem_price(min_level=3, max_level=19):
     return results
 
 def print_output():
-    price_info = get_gem_price()
+    if len(sys.argv) < 2:
+        print("League argument not provided, exiting now")
+        sys.exit(1)
+    price_info = get_gem_price(sys.argv[1])
     if not len(price_info):
         print("Trouble parsing gem data due to OCR technical difficulties, sorry! (try holding alt and trying again)")
         sys.exit(1)

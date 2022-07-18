@@ -1,5 +1,5 @@
-script  = %a_scriptdir%\heist_ocr.py
-command := "python3 "
+league = Sentinel
+script  = %a_scriptdir%\dist\heist_ocr\heist_ocr.exe %league%
 JEE_RunGetStdOut(vTarget, vSize:="")
 {
     DetectHiddenWindows, On
@@ -18,9 +18,10 @@ JEE_RunGetStdOut(vTarget, vSize:="")
     Process, Close, % vPID
     return vStdOut
 }
+
 Alt & F3::
 F3::
 {
-    result := JEE_RunGetStdOut(command . script)
+    result := JEE_RunGetStdOut(script)
     MsgBox % result
 }
