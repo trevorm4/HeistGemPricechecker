@@ -1,4 +1,4 @@
-league = Sentinel
+league = Sanctum
 script  = %a_scriptdir%\dist\heist_ocr\heist_ocr.exe %league%
 JEE_RunGetStdOut(vTarget, vSize:="")
 {

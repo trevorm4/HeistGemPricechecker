@@ -17,7 +17,7 @@ def load_gem_names(gem_names):
     return words
 
 
-def get_gem_data(league="Sentinel"):
+def get_gem_data(league="Sanctum"):
     r = requests.get(gem_url.format(league))
     if r.status_code != 200:
         print("Request to Poe.Ninja failed, most likely invalid league provided")
@@ -25,7 +25,7 @@ def get_gem_data(league="Sentinel"):
     return json.loads(r.text)["lines"]
 
 
-def extract_gem_info(lines: dict, gem_names: list):
+def extract_gem_info(lines, gem_names):
     results = {}
     for gem_name in gem_names:
         results[gem_name] = {}
@@ -35,13 +35,13 @@ def extract_gem_info(lines: dict, gem_names: list):
                     results[gem_name][l.get("gemLevel")]["chaos"] = min(
                         results[gem_name][l.get("gemLevel")]["chaos"], l.get("chaosValue")
                     )
-                    results[gem_name][l.get("gemLevel")]["ex"] = min(
-                        results[gem_name][l.get("gemLevel")]["ex"], l.get("exaltedValue")
+                    results[gem_name][l.get("gemLevel")]["div"] = min(
+                        results[gem_name][l.get("gemLevel")]["div"], l.get("divineValue")
                     )
                 else:
                     results[gem_name][l.get("gemLevel")] = {
                         "chaos": l["chaosValue"],
-                        "ex": l["exaltedValue"],
+                        "div": l["divineValue"],
                     }
     return results
 
@@ -96,8 +96,8 @@ def get_gem_name():
     return nm.unique([extract_gem_name(gem_str, gems) for gem_str in split_list])
 
 
-def get_gem_price(min_level=3, max_level=19):
-    data = get_gem_data()
+def get_gem_price(league, min_level=3, max_level=19):
+    data = get_gem_data(league)
     gem_info = extract_gem_info(data, get_gem_name())
     results = {}
     for name, d in gem_info.items():
@@ -116,9 +116,12 @@ def print_output():
         print("Trouble parsing gem data due to OCR technical difficulties, sorry! (try holding alt and trying again)")
         sys.exit(1)
     for gem, level_dict in price_info.items():
-        min_level = min(level_dict.keys())
-        chaos_value = level_dict[min_level]["chaos"]
-        ex_value = level_dict[min_level]["ex"]
-        print(f"{gem} (level {min_level}) - chaos: {chaos_value}, ex: {ex_value}")
+        if len(level_dict.keys()) == 0:
+            print("Not enough poe ninja data, sorry")
+        else:
+            min_level = min(level_dict.keys())
+            chaos_value = level_dict[min_level]["chaos"]
+            div_value = level_dict[min_level]["div"]
+            print(f"{gem} (level {min_level}) - chaos: {chaos_value}, div: {div_value}")
 
 print_output()
