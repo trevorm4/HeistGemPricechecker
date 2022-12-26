@@ -4,7 +4,7 @@ Prices heist gems using OCR and Poe.Ninja api
 Setup guide
 
 
-1) Download release
+1) Download `pricechecker.zip` from the [releases](https://github.com/trevorm4/HeistGemPricechecker/releases) page
 2) Run `heist_pricer.ahk`
 3) Press `f3` when gems on screen and enjoy
 
